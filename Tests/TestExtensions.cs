@@ -5,7 +5,7 @@ using ThreadIO;
 
 namespace Tests
 {
-    public static class Extensions
+    public static class TestExtensions
     {
         public static void AssertOff<T>(this ILockScopeDictionary<T> dict, T key)
         {

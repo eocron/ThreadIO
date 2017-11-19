@@ -5,7 +5,18 @@ namespace ThreadIO
 {
     public interface ILockScopeDictionary<TKey> : IReadOnlyCollection<TKey>
     {
+        /// <summary>
+        /// Checks if read lock is held for specified key
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
         bool IsReadHeld(TKey key);
+
+        /// <summary>
+        /// Checks if write lock is held for specified key
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
         bool IsWriteHeld(TKey key);
 
         IDisposable GetReadScope(TKey key, TimeSpan? timeout = default(TimeSpan?));

@@ -11,6 +11,13 @@
         /// <param name="to"></param>
         /// <returns></returns>
         bool TryAddEdge(TKey from, TKey to);
+
+        /// <summary>
+        /// Removes dependency from one key to another.
+        /// </summary>
+        /// <param name="from"></param>
+        /// <param name="to"></param>
+        /// <returns></returns>
         bool TryRemoveEdge(TKey from, TKey to);
     }
 }

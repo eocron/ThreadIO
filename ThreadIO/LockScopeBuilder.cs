@@ -7,11 +7,11 @@ namespace ThreadIO
     {
         private readonly ILockScopeDictionary<TKey> _dict;
 
-        public readonly List<TKey> ToRead;
+        internal readonly List<TKey> ToRead;
 
-        public readonly List<TKey> ToWrite;
+        internal readonly List<TKey> ToWrite;
 
-        public TimeSpan WithTimeout { get; set; }
+        internal TimeSpan WithTimeout { get; set; }
 
         internal LockScopeBuilder(ILockScopeDictionary<TKey> dict)
         {
