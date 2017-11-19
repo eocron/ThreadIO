@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ThreadIO
 {
-    public static class Extensions
+    public static class FluentExtensions
     {
         public static LockScopeBuilder<TKey> Write<TKey>(this LockScopeBuilder<TKey> builder, params TKey[] args)
         {
